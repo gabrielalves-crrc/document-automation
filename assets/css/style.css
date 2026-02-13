@@ -10,7 +10,7 @@ body {
   font-size: 9pt;
   background: #fff;
   padding: 0.25in;
-  max-width: 1100px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
@@ -216,9 +216,6 @@ select:focus {
 /* ========== OBSERVAÇÃO ========== */
 .container-observacao {
   margin-top: 15px;
-  border: 1px solid black;
-  padding: 10px;
-  background: #fef9e7;
 }
 
 /* ========== BOTÕES ========== */
@@ -254,6 +251,12 @@ select:focus {
 
 .btn-secondary:hover {
   background: #555;
+}
+
+.new-container-ass {
+    display: flex;
+    justify-content: space-between;
+    margin: 4.5vh 0.1vh;
 }
 
 /* ========== IMPRESSÃO ========== */

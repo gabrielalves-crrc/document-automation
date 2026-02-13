@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anexo 3 - Formulário de Reembolso para Viagens</title>
-  
+
   <!-- CSS EXTERNO -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -20,7 +21,7 @@
     </div>
   </div>
   <div class="financeiro-ref">Financeiro 011 -- 财务011</div>
-  
+
   <!-- ========== TABELA PRINCIPAL ========== -->
   <table>
     <!-- LINHA 1: Departamento, Projeto/WBS, Anexos -->
@@ -47,7 +48,7 @@
         <input type="number" id="num_anexos" style="width: 100%;" min="0" value="0">
       </td>
     </tr>
-    
+
     <!-- LINHA 2: Objetivo da Viagem -->
     <tr>
       <td style="width: 10%;">
@@ -58,7 +59,7 @@
         <input type="text" id="objetivo" style="width: 100%;" placeholder="Descreva o objetivo da viagem">
       </td>
     </tr>
-    
+
     <!-- LINHA 3: Número do Funcionário, Nome e CPF, Contato -->
     <tr>
       <td style="width: 10%;">
@@ -84,7 +85,7 @@
         <input type="text" id="contato" style="width: 100%;" placeholder="Telefone/Email">
       </td>
     </tr>
-    
+
     <!-- LINHA 4: Forma de Pagamento, Banco, Ag/Cc, Chave PIX -->
     <tr>
       <td style="width: 10%;">
@@ -115,7 +116,7 @@
         <input type="text" id="conta" style="width: 53%;" placeholder="Conta/PIX">
       </td>
     </tr>
-    
+
     <!-- LINHA 5: Gastos Excedendo o Orçamento / 费用超标 -->
     <tr>
       <td rowspan="2" style="width: 10%; vertical-align: middle;">
@@ -146,7 +147,7 @@
         <input type="text" id="valor_excedente" style="width: 100%;" placeholder="R$ 0,00">
       </td>
     </tr>
-    
+
     <!-- LINHA 6: Aprovação do Gerente Geral / 总经理批准 -->
     <tr>
       <td style="width: 10%;">
@@ -158,10 +159,10 @@
       </td>
     </tr>
   </table>
-  
+
   <!-- ========== TABELA DE DESPESAS DE TRANSPORTE ========== -->
   <div class="secao-titulo">DESPESAS DE TRANSPORTE / 交通费</div>
-  
+
   <table class="tabela-despesas">
     <!-- CABEÇALHO DA TABELA DE TRANSPORTE -->
     <tr class="cabecalho-tabela">
@@ -176,7 +177,7 @@
       <td style="width: 5%;"><strong>Taxa Câmbio</strong><br><span class="zh">汇率</span></td>
       <td style="width: 8%;"><strong>Valor em Reais</strong><br><span class="zh">雷亚尔金额</span></td>
     </tr>
-    
+
     <!-- LINHA 1 - TRANSPORTE -->
     <tr>
       <td><input type="date" id="transp_data_partida_1" class="campo-data"></td>
@@ -203,10 +204,11 @@
           <option value="EUR">€</option>
         </select>
       </td>
-      <td><input type="number" id="transp_cambio_1" class="campo-cambio" placeholder="1,00" step="0.01" value="1.00"></td>
+      <td><input type="number" id="transp_cambio_1" class="campo-cambio" placeholder="1,00" step="0.01" value="1.00">
+      </td>
       <td><input type="text" id="transp_reais_1" class="campo-reais" readonly placeholder="R$ 0,00"></td>
     </tr>
-    
+
     <!-- LINHA 2 - TRANSPORTE -->
     <tr>
       <td><input type="date" id="transp_data_partida_2" class="campo-data"></td>
@@ -233,14 +235,15 @@
           <option value="EUR">€</option>
         </select>
       </td>
-      <td><input type="number" id="transp_cambio_2" class="campo-cambio" placeholder="1,00" step="0.01" value="1.00"></td>
+      <td><input type="number" id="transp_cambio_2" class="campo-cambio" placeholder="1,00" step="0.01" value="1.00">
+      </td>
       <td><input type="text" id="transp_reais_2" class="campo-reais" readonly placeholder="R$ 0,00"></td>
     </tr>
   </table>
-  
+
   <!-- ========== TABELA DE DESPESAS DE HOSPEDAGEM ========== -->
   <div class="secao-titulo">DESPESAS DE HOSPEDAGEM / 住宿费</div>
-  
+
   <table class="tabela-despesas">
     <tr class="cabecalho-tabela">
       <td style="width: 10%;"><strong>Cidade da Estadia</strong><br><span class="zh">住宿城市</span></td>
@@ -275,10 +278,10 @@
       <td><input type="text" id="hosp_reais_2" class="campo-reais" readonly placeholder="R$ 0,00"></td>
     </tr>
   </table>
-  
+
   <!-- ========== DIÁRIAS / PROJETO ========== -->
   <div class="secao-titulo">DIÁRIAS / 项目</div>
-  
+
   <table>
     <tr class="cabecalho-tabela">
       <td style="width: 20%;"><strong>Projeto</strong><br><span class="zh">项目</span></td>
@@ -306,10 +309,10 @@
       <td><input type="text" id="diaria_reais" class="campo-reais" readonly placeholder="R$ 0,00"></td>
     </tr>
   </table>
-  
+
   <!-- ========== CUSTOS VINDOS DE SERVIÇOS PÚBLICOS ========== -->
   <div class="secao-titulo">Custos Vindos de Serviços Públicos (Impressões, cartas, fax) / 公杂费</div>
-  
+
   <table>
     <tr>
       <td style="width: 60%;">
@@ -323,10 +326,10 @@
       </td>
     </tr>
   </table>
-  
+
   <!-- ========== OUTRAS DESPESAS ========== -->
   <div class="secao-titulo">Outras Despesas / 其他</div>
-  
+
   <table>
     <tr>
       <td style="width: 60%;">
@@ -340,7 +343,7 @@
       </td>
     </tr>
   </table>
-  
+
   <!-- ========== VALOR TOTAL (ESCRITO POR EXTENSO) ========== -->
   <div class="container-valor-total">
     <div class="label-extenso">
@@ -355,62 +358,39 @@
       <span id="total_geral" class="total-valor">R$ 0,00</span>
     </div>
   </div>
-  
+
   <!-- ========== ASSINATURAS E APROVAÇÕES ========== -->
-  <div class="container-assinaturas">
-    <table>
-      <tr>
-        <td class="assinatura-label">
-          <strong>Gerente Geral</strong><br>
-          <span class="zh">总经理：</span>
-        </td>
-        <td class="assinatura-campo">
-          <input type="text" id="assinatura_gerente" placeholder="Nome e data">
-        </td>
-        <td class="assinatura-label">
-          <strong>Vice-Presidente Direto:</strong><br>
-          <span class="zh">员工所在部门/费用归口分管副总：</span>
-        </td>
-        <td class="assinatura-campo">
-          <input type="text" id="assinatura_vp" placeholder="Nome e data">
-        </td>
-      </tr>
-      <tr>
-        <td class="assinatura-label">
-          <strong>Responsável Direto:</strong><br>
-          <span class="zh">员工所在部门/费用归口部门负责人：</span>
-        </td>
-        <td class="assinatura-campo">
-          <input type="text" id="assinatura_responsavel" placeholder="Nome e data">
-        </td>
-        <td class="assinatura-label">
-          <strong>Financeiro:</strong><br>
-          <span class="zh">财务审核：</span>
-        </td>
-        <td class="assinatura-campo">
-          <input type="text" id="assinatura_financeiro" placeholder="Nome e data">
-        </td>
-      </tr>
-      <tr>
-        <td class="assinatura-label">
-          <strong>Executado por:</strong><br>
-          <span class="zh">经办人：</span>
-        </td>
-        <td colspan="3" class="assinatura-campo">
-          <input type="text" id="assinatura_executado" style="width: 100%;" placeholder="Nome e data">
-        </td>
-      </tr>
-    </table>
+  <div class="new-container-ass">
+    <div class="div-one-ass">
+      <p>Gerente Geral 总经理:</p>
+    </div>
+
+    <div class="div-one-ass">
+      <p>Vice-Presidente Direto:<br>员工所在部门/费用归口分管副总:</p>
+    </div>
+
+    <div class="div-one-ass">
+      <p>Responsável Direto:<br>员工所在部门/费用归口部门负责人:</p>
+    </div>
+
+    <div class="div-one-ass">
+      <p>Financeiro:<br>财务审核:</p>
+    </div>
+
+    <div class="div-one-ass">
+      <p>Gerente Geral 总经理:</p>
+    </div>
   </div>
-  
+
   <!-- ========== OBSERVAÇÃO FINAL ========== -->
   <div class="container-observacao">
     <strong>Observação:</strong><br>
-    1. Caso o aplicante não pertença ao departamento custeador, as assinaturas dos responsáveis dos dois departamentos devem ser recolhidas.<br>
+    1. Caso o aplicante não pertença ao departamento custeador, as assinaturas dos responsáveis dos dois departamentos
+    devem ser recolhidas.<br>
     <span class="zh"><strong>注：</strong><br>
-    1、若费用归口单位与员工所在单位不一致，需要费用归口单位领导和员工所在单位领导分别批准。超标费用必须在得到总经理的批准后方可报销。</span>
+      1、若费用归口单位与员工所在单位不一致，需要费用归口单位领导和员工所在单位领导分别批准。超标费用必须在得到总经理的批准后方可报销。</span>
   </div>
-  
+
   <!-- ========== BOTÕES ========== -->
   <div class="no-print container-botoes">
     <button class="btn btn-primary" onclick="ReembolsoViagem.calcularTodosValores()">🧮 Calcular Totais</button>
@@ -418,8 +398,9 @@
     <button class="btn btn-secondary" onclick="ReembolsoViagem.salvarRascunho()">💾 Salvar Rascunho</button>
     <button class="btn btn-secondary" onclick="ReembolsoViagem.limparFormulario()">🗑️ Novo Formulário</button>
   </div>
-  
+
   <!-- JAVASCRIPT EXTERNO -->
   <script src="assets/js/scripts.js"></script>
 </body>
+
 </html>
