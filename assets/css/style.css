@@ -1,4 +1,4 @@
-/* ========== RESET COMPLETO ========== */
+/* ========== RESET COMPLETO - ZERAR TUDO ========== */
 * {
   margin: 0;
   padding: 0;
@@ -7,274 +7,415 @@
 
 body {
   font-family: 'Arial', 'Helvetica', sans-serif;
-  font-size: 9pt;
-  background: #fff;
-  padding: 0.25in;
+  font-size: 10pt;
+  /* Tamanho exato do Word */
+  background: white;
+  padding: 0.5in;
+  /* Margem igual ao Word */
   max-width: 1600px;
   margin: 0 auto;
+  line-height: 1.2;
+  color: black;
 }
 
-/* ========== TABELAS ========== */
+/* ========== TABELAS IGUALZINHAS AO WORD ========== */
 table {
   border-collapse: collapse;
   width: 100%;
   table-layout: fixed;
   border: 1px solid black;
-  margin-bottom: 1px;
+  margin-bottom: 2px;
+  background: white;
 }
 
-td, th {
+td {
   border: 1px solid black;
   padding: 4px 4px;
   vertical-align: top;
-  font-family: 'Arial', sans-serif;
-  font-size: 9pt;
-  word-wrap: break-word;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 10pt;
+  color: black;
+  background: white !important;
+  /* Forçar fundo branco */
+  text-align: center;
 }
 
-/* ========== TEXTOS ========== */
+/* ========== TEXTOS EM CHINÊS ========== */
 .zh {
   font-family: 'SimSun', '宋体', 'Arial', sans-serif;
-  color: #000;
+  color: black;
 }
 
-/* ========== CABEÇALHOS ========== */
+/* ========== CABEÇALHOS IGUAIS ========== */
 .anexo-titulo {
   font-size: 12pt;
   font-weight: bold;
   margin-bottom: 5px;
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 5px;
+  color: black;
 }
 
 .anexo-subtitulo {
   font-size: 14pt;
   font-weight: bold;
-  border-bottom: 2px solid black;
-  padding-bottom: 5px;
-  flex-grow: 1;
+  margin-bottom: 5px;
+  color: black;
 }
 
 .numero-documento {
-  border: 1px solid black;
-  padding: 5px;
-  margin-left: 10px;
-  font-size: 9pt;
+  padding: 4px 8px;
+  font-size: 10pt;
+  color: black;
+  background: white;
+  margin-bottom: 5px;
 }
 
 .financeiro-ref {
   text-align: right;
   margin-bottom: 10px;
-  font-size: 9pt;
+  font-size: 10pt;
+  color: black;
 }
 
 .secao-titulo {
-  margin-top: 20px;
+  margin-top: 10px;
   font-weight: bold;
   font-size: 10pt;
-  background: #eee;
-  padding: 5px;
-  border: 1px solid black;
-  border-bottom: none;
-}
-
-.cabecalho-tabela {
-  background: #f5f5f5;
-}
-
-/* ========== CAMPOS DE FORMULÁRIO ========== */
-input[type="text"], 
-input[type="date"], 
-input[type="number"] {
+  color: black;
   border: none;
-  border-bottom: 1px solid #333;
-  background: transparent;
-  font-family: 'Arial', sans-serif;
-  font-size: 9pt;
-  width: 100%;
+  background: white;
   padding: 2px 0;
 }
 
-input[type="text"]:focus, 
-input[type="date"]:focus, 
-input[type="number"]:focus {
-  outline: none;
-  border-bottom: 2px solid #000;
-  background: #f5f5f5;
-}
-
+/* ========== CAMPOS DE PREENCHIMENTO - SEM CORES ========== */
+input[type="text"],
+input[type="date"],
+input[type="number"],
 select {
   border: none;
-  border-bottom: 1px solid #333;
-  background: transparent;
-  font-size: 9pt;
-  padding: 2px 0;
+
+  background: white !important;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 10pt;
   width: 100%;
+  padding: 2px 0;
+  color: black;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
 select:focus {
   outline: none;
-  border-bottom: 2px solid #000;
-  background: #f5f5f5;
+
+  background: white !important;
 }
 
-/* ========== CAMPOS ESPECÍFICOS ========== */
-.campo-data {
-  width: 100%;
+/* ========== SELECTS SEM CORES ========== */
+select {
+  border: none;
+
+  background: white !important;
+  border-radius: 0;
 }
 
-.campo-select {
-  width: 100%;
+/* ========== CHECKBOXES ORIGINAIS ========== */
+input[type="checkbox"] {
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+  border: 1px solid black;
+  background: white;
 }
 
+/* ========== CAMPOS DE MOEDA - SEM CORES ========== */
 .campo-moeda-container {
   display: flex;
   gap: 2px;
+  background: white;
 }
 
 .campo-valor-moeda {
   width: 60%;
+
 }
 
 .campo-moeda-select {
   width: 35%;
+
+  background: white;
 }
 
-.campo-cambio {
+.campo-cambio,
+.campo-reais {
   width: 100%;
+  background: white !important;
 }
 
 .campo-reais {
+  background: white !important;
+}
+
+/* ========== CAMPOS DE PROJETO - SEM CORES ========== */
+.campo-select-grande {
   width: 100%;
-  background: #f9f9f9;
+  padding: 2px;
+  border: none;
+
+  background: white !important;
+  font-size: 10pt;
+  border-radius: 0;
+}
+
+.campo-select-pequeno {
+  width: 100%;
+  padding: 2px;
+  border: none;
+
+  background: white !important;
+  font-size: 10pt;
+  border-radius: 0;
+}
+
+.campo-composto {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: white;
+}
+
+.detalhes-container {
+  border: 1px solid black;
+  padding: 4px;
+  margin-top: 2px;
+  font-size: 9pt;
+  background: white !important;
+  color: black;
+}
+
+.tag-contrato {
+  font-weight: bold;
+  color: black;
+  background: white;
+  padding: 0;
 }
 
 /* ========== VALOR TOTAL ========== */
 .container-valor-total {
-  margin-top: 20px;
+  margin-top: 15px;
   display: flex;
   align-items: center;
   border: 1px solid black;
-  padding: 10px;
+  padding: 6px;
+  background: white;
 }
 
 .label-extenso {
   width: 30%;
   font-weight: bold;
+  background: white;
 }
 
 .campo-extenso {
   width: 50%;
 }
 
-.campo-extenso input {
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid black;
-  font-size: 10pt;
-  padding: 5px 0;
-}
-
 .total-geral {
   width: 20%;
   text-align: right;
   font-weight: bold;
-}
-
-.total-label {
-  font-size: 12pt;
+  background: white;
 }
 
 .total-valor {
-  font-size: 14pt;
-  color: #000;
+  font-size: 12pt;
+  font-weight: bold;
 }
 
 /* ========== ASSINATURAS ========== */
 .container-assinaturas {
-  margin-top: 20px;
+  margin-top: 15px;
+  background: white;
 }
 
 .assinatura-label {
   width: 20%;
-  background: #f5f5f5;
+  font-weight: bold;
+  background: white !important;
 }
 
 .assinatura-campo {
   width: 30%;
-}
-
-.assinatura-campo input {
-  width: 100%;
+  background: white !important;
 }
 
 /* ========== OBSERVAÇÃO ========== */
 .container-observacao {
   margin-top: 15px;
+  border: 1px solid black;
+  padding: 8px;
+  background: white !important;
+  font-size: 9pt;
 }
 
-/* ========== BOTÕES ========== */
+/* ========== BOTÕES - SÓ APARECEM NA TELA ========== */
 .container-botoes {
   margin-top: 30px;
   text-align: center;
   padding: 20px;
-  border-top: 2px solid #ccc;
+  border-top: 1px dashed #999;
 }
 
 .btn {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  font-size: 11pt;
+  padding: 8px 16px;
+  border: 1px solid #666;
+  background: white;
+  color: black;
+  font-size: 10pt;
   cursor: pointer;
-  margin-right: 10px;
+  margin: 0 4px;
 }
 
-.btn-primary {
-  background: #0066cc;
-  color: white;
+.btn:hover {
+  background: #f0f0f0;
 }
 
-.btn-primary:hover {
-  background: #0052a3;
-}
-
-.btn-secondary {
-  background: #666;
-  color: white;
-}
-
-.btn-secondary:hover {
-  background: #555;
-}
-
-.new-container-ass {
-    display: flex;
-    justify-content: space-between;
-    margin: 4.5vh 0.1vh;
-}
-
-/* ========== IMPRESSÃO ========== */
+/* ========== IMPRESSÃO PERFEITA ========== */
 @media print {
   body {
-    padding: 0.2in;
+    padding: 0.5in;
     background: white;
   }
-  
-  input[type="text"], 
-  input[type="date"], 
+
+  input[type="text"],
+  input[type="date"],
   input[type="number"],
   select {
-    border-bottom: 1px solid black;
-    background: transparent;
+
+    background: white !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
-  
+
   .no-print {
     display: none !important;
   }
+
+  table,
+  td,
+  th {
+    border: 1px solid black !important;
+    background: white !important;
+  }
+
+  * {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* CSS QUE EU ADICIONEI  */
+.flex-all-in-one {
+  display: flex;
+  justify-content: space-around;
+}
+
+.table-gold {
+  text-align: center;
+  width: 148.9px;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 1px;
+}
+
+.table-gold p {
+  border: 1px solid;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-gold input {
+  border: 1px solid;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.section-transporte {
+  display: flex;
+  flex-direction: row;
+}
+
+.transporte-valor-flex-1 {
+  display: flex;
+}
+
+.transporte-valor-flex-2 {
+  display: flex;
+}
+
+.table-gold2 {
+  text-align: center;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 1px;
+}
+
+.table-gold2 p {
+  border: 1px solid;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-gold2 input {
+  border: 1px solid;
+  height: 70px;
+}
+
+
+.table-projeto-a1 {
+  width: 162px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+}
+
+.table-projeto-a3 {
+  width: 530px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.flex-dados-projetos {
+  display: flex;
+  justify-content: center;
+}
+
+.assinaturas2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.position-more {
+  position: relative;
+  right: 4%;
 }

@@ -1,0 +1,30 @@
+{
+  "projetos": [
+    {
+      "id": 1,
+      "codigo": "STM 001/2025",
+      "nome_pt": "SP - Trem Linha 1/2/3",
+      "nome_zh": "圣保罗地铁1/2/3号线",
+      "contrato": "STM 001/2025"
+    },
+    {
+      "id": 2,
+      "codigo": "NORTE-2025",
+      "nome_pt": "SP - Manutenção da Linha Norte do Trem",
+      "nome_zh": "圣保罗城际铁路北线维保项目",
+      "contrato": null
+    },
+    {
+      "id": 3,
+      "codigo": "SFBX-2024-023",
+      "nome_pt": "HK - TIC trem do norte",
+      "nome_zh": "香港TIC北轴城铁路项目",
+      "contrato": "SFBX-2024-023"
+    }
+  ],
+  "wbs": ["WBS-2025-001", "WBS-2025-002", "WBS-2025-003"],
+  "centros_custo": [
+    { "id": "CC001", "nome": "Centro de Custo São Paulo", "nome_zh": "圣保罗成本中心" },
+    { "id": "CC002", "nome": "Centro de Custo Hong Kong", "nome_zh": "香港成本中心" }
+  ]
+}
