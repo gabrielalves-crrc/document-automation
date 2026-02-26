@@ -9,7 +9,6 @@
 </head>
 
 <body>
-  <!-- CABEÇALHO -->
   <div class="flex-all-in-one">
     <div class="anexo-titulo">Anexo 3 -- 附表3</div>
     <div class="header-container">
@@ -21,400 +20,560 @@
   </div>
 
   <!-- TABELA PRINCIPAL -->
-  <table>
-    <!-- LINHA 1: Departamento e Projeto -->
+  <table style="border-collapse: collapse; width: 100%; border: 1px solid black;">
     <tr>
       <td style="width: 10%; border: 1px solid black; padding: 4px;">
-        <strong>Departamento</strong><br>
-        <span class="zh">部门</span>
+        <strong>Departamento</strong><br><span class="zh">部门</span>
       </td>
       <td style="width: 20%; border: 1px solid black; padding: 4px;">
-        <input type="text" id="departamento" style="width: 100%; border: none;  " placeholder="Digite o departamento">
+        <input type="text" id="departamento" style="width: 100%; border: none;" placeholder="Digite o departamento">
       </td>
       <td style="width: 20%; border: 1px solid black; padding: 4px;" colspan="2">
-        <strong>Projeto / WBS / Centro Custeador</strong><br>
-        <span class="zh">项目/WBS/成本中心</span>
+        <strong>Projeto / WBS / Centro Custeador</strong><br><span class="zh">项目/WBS/成本中心</span>
       </td>
       <td style="width: 30%; border: 1px solid black; padding: 4px;" colspan="2">
-        <!-- CAMPOS DE PROJETO SEM CORES -->
-        <select id="projeto_select" style="width: 100%; border: none;   background: white; margin-bottom: 2px;">
+        <select id="projeto_select" style="width: 100%; border: none; background: white; margin-bottom: 2px;">
           <option value="">-- Selecione o Projeto --</option>
         </select>
         <div id="detalhes_projeto" style="border: 1px solid black; padding: 2px; margin: 2px 0; display: none;"></div>
         <div style="display: flex; gap: 4px;">
-          <select id="wbs_select" style="width: 100%; border: none;   background: white;">
+          <select id="wbs_select" style="width: 100%; border: none; background: white;">
             <option value="">WBS</option>
           </select>
-          <select id="centro_custo_select" style="width: 100%; border: none;   background: white;">
+          <select id="centro_custo_select" style="width: 100%; border: none; background: white;">
             <option value="">Centro Custo</option>
           </select>
         </div>
         <input type="hidden" id="projeto">
       </td>
       <td style="width: 10%; border: 1px solid black; padding: 4px;">
-        <strong>Número de Anexos</strong><br>
-        <span class="zh">附件数量</span>
+        <strong>Número de Anexos</strong><br><span class="zh">附件数量</span>
       </td>
       <td style="width: 10%; border: 1px solid black; padding: 4px;">
-        <input type="number" id="num_anexos" style="width: 100%; border: none;  " min="0" value="0">
+        <input type="number" id="num_anexos" style="width: 100%; border: none;" min="0" value="0">
       </td>
     </tr>
-
-    <!-- LINHA 2: Objetivo -->
     <tr>
-      <td><strong>Objetivo da Viagem</strong><br><span class="zh">出差目的</span></td>
-      <td colspan="7"><input type="text" id="objetivo" style="width: 100%;" placeholder="Descreva o objetivo da viagem">
+      <td style="border: 1px solid black; padding: 4px;">
+        <strong>Objetivo da Viagem</strong><br><span class="zh">出差目的</span>
+      </td>
+      <td colspan="7" style="border: 1px solid black; padding: 4px;">
+        <input type="text" id="objetivo" style="width: 100%; border: none;" placeholder="Descreva o objetivo da viagem">
       </td>
     </tr>
-
-    <!-- LINHA 3: Funcionário -->
     <tr>
-      <td><strong>Número do Funcionário</strong><br><span class="zh">员工编号</span></td>
-      <td><input type="text" id="funcionario_num" style="width: 100%;" placeholder="Nº funcionário"></td>
-      <td colspan="2"><strong>Nome e CPF</strong><br><span class="zh">姓名及CPF</span></td>
-      <td colspan="2">
-        <input type="text" id="funcionario_nome" style="width: 70%;" placeholder="Nome completo">
-        <input type="text" id="funcionario_cpf" style="width: 28%;" placeholder="CPF">
+      <td style="border: 1px solid black; padding: 4px;">
+        <strong>Número do Funcionário</strong><br><span class="zh">员工编号</span>
       </td>
-      <td><strong>Forma de contato</strong><br><span class="zh">出差人联系方式</span></td>
-      <td><input type="text" id="contato" style="width: 100%;" placeholder="Telefone/Email"></td>
+      <td style="border: 1px solid black; padding: 4px;">
+        <input type="text" id="funcionario_num" style="width: 100%; border: none;" placeholder="Nº funcionário">
+      </td>
+      <td colspan="2" style="border: 1px solid black; padding: 4px;">
+        <strong>Nome e CPF</strong><br><span class="zh">姓名及CPF</span>
+      </td>
+      <td colspan="2" style="border: 1px solid black; padding: 4px;">
+        <input type="text" id="funcionario_nome" style="width: 70%; border: none;" placeholder="Nome completo">
+        <input type="text" id="funcionario_cpf" style="width: 28%; border: none;" placeholder="CPF">
+      </td>
+      <td style="border: 1px solid black; padding: 4px;">
+        <strong>Forma de contato</strong><br><span class="zh">出差人联系方式</span>
+      </td>
+      <td style="border: 1px solid black; padding: 4px;">
+        <input type="text" id="contato" style="width: 100%; border: none;" placeholder="Telefone/Email">
+      </td>
     </tr>
-
-    <!-- LINHA 4: Pagamento -->
     <tr>
-      <td><strong>Forma de Pagamento</strong><br><span class="zh">付款方式</span></td>
-      <td>
-        <select id="forma_pagamento">
+      <td style="border: 1px solid black; padding: 4px;">
+        <strong>Forma de Pagamento</strong><br><span class="zh">付款方式</span>
+      </td>
+      <td style="border: 1px solid black; padding: 4px;">
+        <select id="forma_pagamento" style="width: 100%; border: none; background: white;">
           <option value="">Selecione</option>
           <option value="transferencia">Transferência</option>
           <option value="pix">PIX</option>
           <option value="dinheiro">Dinheiro</option>
         </select>
       </td>
-      <td><strong>Nome do Banco</strong><br><span class="zh">开户行全称</span></td>
-      <td><input type="text" id="banco_nome" style="width: 100%;" placeholder="Banco"></td>
-      <td colspan="2"><strong>Ag e Cc / Chave PIX</strong><br><span class="zh">分支行号及账号/PIX码</span></td>
-      <td colspan="2">
-        <input type="text" id="agencia" style="width: 45%;" placeholder="Agência">
-        <input type="text" id="conta" style="width: 53%;" placeholder="Conta/PIX">
+      <td style="border: 1px solid black; padding: 4px;">
+        <strong>Nome do Banco</strong><br><span class="zh">开户行全称</span>
+      </td>
+      <td style="border: 1px solid black; padding: 4px;">
+        <input type="text" id="banco_nome" style="width: 100%; border: none;" placeholder="Banco">
+      </td>
+      <td colspan="2" style="border: 1px solid black; padding: 4px;">
+        <strong>Ag e Cc / Chave PIX</strong><br><span class="zh">分支行号及账号/PIX码</span>
+      </td>
+      <td colspan="2" style="border: 1px solid black; padding: 4px;">
+        <input type="text" id="agencia" style="width: 45%; border: none;" placeholder="Agência">
+        <input type="text" id="conta" style="width: 53%; border: none;" placeholder="Conta/PIX">
+      </td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 4px; vertical-align: middle;">
+        <strong>Gastos Excedendo o Orçamento</strong><br><span class="zh">费用超标</span>
+      </td>
+      <td style="border: 1px solid black; padding: 4px;">
+        <strong>Razão</strong><br><span class="zh">超标原因</span>
+      </td>
+      <td colspan="2" style="border: 1px solid black; padding: 4px;">
+        <input type="text" id="razao" style="width: 100%; border: none;" placeholder="Justificativa">
+      </td>
+      <td style="border: 1px solid black; padding: 4px;">
+        <strong>Item Excedente</strong><br><span class="zh">超标项目</span>
+      </td>
+      <td style="border: 1px solid black; padding: 4px;">
+        <input type="text" id="item_excedente" style="width: 100%; border: none;" placeholder="Item">
+      </td>
+      <td style="border: 1px solid black; padding: 4px;">
+        <strong>Valor Excedente</strong><br><span class="zh">超标金额</span>
+      </td>
+      <td style="border: 1px solid black; padding: 4px;">
+        <input type="text" id="valor_excedente" style="width: 100%; border: none;" placeholder="Valor">
+      </td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 4px;">
+        <strong>Aprovação do Gerente</strong><br><span class="zh">总经理批准</span>
+      </td>
+      <td colspan="7" style="border: 1px solid black; padding: 4px;">
+        <input type="text" id="aprovacao_gerente" style="width: 100%; border: none;"
+          placeholder="Nome / Data / Assinatura">
+      </td>
+    </tr>
+  </table>
+
+  <table style="border-collapse: collapse; width: 100%; border: 1px solid black;">
+    <tr>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; width: 10%;">
+        <strong>Data Partida</strong><br><span class="zh">出发日期</span>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; width: 10%;">
+        <strong>Data Chegada</strong><br><span class="zh">抵达日期</span>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; width: 10%;">
+        <strong>Cidade Partida</strong><br><span class="zh">出发城市</span>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; width: 10%;">
+        <strong>Cidade Destino</strong><br><span class="zh">到达城市</span>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; width: 10%;">
+        <strong>Início Estadia</strong><br><span class="zh">停留起始</span>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; width: 10%;">
+        <strong>Fim Estadia</strong><br><span class="zh">停留终止</span>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; width: 10%;">
+        <strong>Meio Transporte</strong><br><span class="zh">交通工具</span>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; width: 12%;">
+        <strong>Custo Transporte</strong><br><span class="zh">交通费及币种</span>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; width: 8%;">
+        <strong>Câmbio</strong><br><span class="zh">汇率</span>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; width: 10%;">
+        <strong>Valor R$</strong><br><span class="zh">雷亚尔金额</span>
       </td>
     </tr>
 
-    <!-- LINHA 5: Gastos Excedentes -->
     <tr>
-      <td rowspan="2"><strong>Gastos Excedendo o Orçamento</strong><br><span class="zh">费用超标</span></td>
-      <td><strong>Razão</strong><br><span class="zh">超标原因</span></td>
-      <td colspan="2"><input type="text" id="razao" style="width: 100%;" placeholder="Justificativa"></td>
-      <td><strong>Item Excedente</strong><br><span class="zh">超标项目</span></td>
-      <td><input type="text" id="item_excedente" style="width: 100%;" placeholder="Item"></td>
-      <td><strong>Valor Excedente</strong><br><span class="zh">超标金额</span></td>
-      <td><input type="text" id="item_excedente" style="width: 100%;" placeholder="Item"></td>
+      <td style="border: 1px solid black; padding: 0;">
+        <input type="date" id="transp_data_partida_1"
+          style="width: 100%; height: 70px; border: none; background: transparent; padding: 0; box-sizing: border-box;">
+      </td>
+      <td style="border: 1px solid black; padding: 0;">
+        <input type="date" id="transp_data_chegada_1"
+          style="width: 100%; height: 70px; border: none; background: transparent; padding: 0; box-sizing: border-box;">
+      </td>
+      <td style="border: 1px solid black; padding: 0;">
+        <input type="text" id="transp_cidade_partida_1" placeholder="Origem"
+          style="width: 100%; height: 70px; border: none; background: transparent; padding: 0 4px; box-sizing: border-box;">
+      </td>
+      <td style="border: 1px solid black; padding: 0;">
+        <input type="text" id="transp_cidade_destino_1" placeholder="Destino"
+          style="width: 100%; height: 70px; border: none; background: transparent; padding: 0 4px; box-sizing: border-box;">
+      </td>
+      <td style="border: 1px solid black; padding: 0;">
+        <input type="date" id="transp_inicio_1"
+          style="width: 100%; height: 70px; border: none; background: transparent; padding: 0; box-sizing: border-box;">
+      </td>
+      <td style="border: 1px solid black; padding: 0;">
+        <input type="date" id="transp_fim_1"
+          style="width: 100%; height: 70px; border: none; background: transparent; padding: 0; box-sizing: border-box;">
+      </td>
+      <td style="border: 1px solid black; padding: 0;">
+        <select id="transp_meio_1"
+          style="width: 100%; height: 70px; border: none; background: transparent; padding: 0 4px; box-sizing: border-box;">
+          <option value="">Selecione</option>
+          <option value="aviao">Avião</option>
+          <option value="trem">Trem</option>
+          <option value="onibus">Ônibus</option>
+        </select>
+      </td>
+      <td style="border: 1px solid black; padding: 0;">
+        <div style="display: flex; height: 70px; width: 100%;">
+          <input type="number" id="transp_valor_1" placeholder="0,00" step="0.01"
+            style="width: 60%; height: 100%; border: none; background: transparent; padding: 0 4px; box-sizing: border-box;">
+          <select id="transp_moeda_1"
+            style="width: 40%; height: 100%; border: none; background: transparent; padding: 0 4px; box-sizing: border-box;">
+            <option value="BRL">R$</option>
+            <option value="USD">US$</option>
+            <option value="EUR">€</option>
+          </select>
+        </div>
+      </td>
+      <td style="border: 1px solid black; padding: 0;">
+        <input type="number" id="transp_cambio_1" value="1.00" step="0.01"
+          style="width: 100%; height: 70px; border: none; background: transparent; padding: 0 4px; box-sizing: border-box;">
+      </td>
+      <td style="border: 1px solid black; padding: 0;">
+        <input type="text" id="transp_reais_1" readonly placeholder="R$ 0,00"
+          style="width: 100%; height: 70px; border: none; background: #f9f9f9; padding: 0 4px; box-sizing: border-box;">
+      </td>
+    </tr>
+
+    <tr>
+      <td style="border: 1px solid black; padding: 0;"></td>
+      <td style="border: 1px solid black; padding: 0;"></td>
+      <td style="border: 1px solid black; padding: 0;"></td>
+      <td style="border: 1px solid black; padding: 0;"></td>
+      <td style="border: 1px solid black; padding: 0;"></td>
+      <td style="border: 1px solid black; padding: 0;"></td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center;">
+        <strong>Cidade Estadia</strong><br><span class="zh">住宿城市</span>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center;">
+        <strong>Custo Moradia</strong><br><span class="zh">住宿费及币种</span>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center;">
+        <strong>Câmbio</strong><br><span class="zh">汇率</span>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center;">
+        <strong>Valor R$</strong><br><span class="zh">雷亚尔金额</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="border: 1px solid black; padding: 0;"></td>
+      <td style="border: 1px solid black; padding: 0;"></td>
+      <td style="border: 1px solid black; padding: 0;"></td>
+      <td style="border: 1px solid black; padding: 0;"></td>
+      <td style="border: 1px solid black; padding: 0;"></td>
+      <td style="border: 1px solid black; padding: 0;"></td>
+      <td style="border: 1px solid black; padding: 0;">
+        <input type="text" id="hosp_cidade_1" placeholder="Cidade"
+          style="width: 100%; height: 70px; border: none; background: transparent; padding: 0 4px; box-sizing: border-box;">
+      </td>
+      <td style="border: 1px solid black; padding: 0;">
+        <div style="display: flex; height: 70px; width: 100%;">
+          <input type="number" id="hosp_valor_1" placeholder="0,00" step="0.01"
+            style="width: 60%; height: 100%; border: none; background: transparent; padding: 0 4px; box-sizing: border-box;">
+          <select id="hosp_moeda_1"
+            style="width: 40%; height: 100%; border: none; background: transparent; padding: 0 4px; box-sizing: border-box;">
+            <option value="BRL">R$</option>
+            <option value="USD">US$</option>
+            <option value="EUR">€</option>
+          </select>
+        </div>
+      </td>
+      <td style="border: 1px solid black; padding: 0;">
+        <input type="number" id="hosp_cambio_1" value="1.00" step="0.01"
+          style="width: 100%; height: 70px; border: none; background: transparent; padding: 0 4px; box-sizing: border-box;">
+      </td>
+      <td style="border: 1px solid black; padding: 0;">
+        <input type="text" id="hosp_reais_1" readonly placeholder="R$ 0,00"
+          style="width: 100%; height: 70px; border: none; background: #f9f9f9; padding: 0 4px; box-sizing: border-box;">
+      </td>
     </tr>
   </table>
-  <!-- LINHA 6: Aprovação Gerente -->
-  <table>
+
+  <table style="border-collapse: collapse; width: 100%; border: 1px solid black;">
     <tr>
-      <td><strong>Aprovação do Gerente</strong><br><span class="zh">总经理批准</span></td>
-      <td colspan="9"><input type="text" id="aprovacao_gerente" style="width: 100%;"
-          placeholder="Nome / Data / Assinatura"></td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; width: 10%;">
+        <strong>Data Partida</strong><br><span class="zh">出发日期</span>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; width: 10%;">
+        <strong>Data Chegada</strong><br><span class="zh">抵达日期</span>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; width: 10%;">
+        <strong>Cidade Partida</strong><br><span class="zh">出发城市</span>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; width: 10%;">
+        <strong>Cidade Destino</strong><br><span class="zh">到达城市</span>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; width: 10%;">
+        <strong>Início Estadia</strong><br><span class="zh">停留起始</span>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; width: 10%;">
+        <strong>Fim Estadia</strong><br><span class="zh">停留终止</span>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; width: 10%;">
+        <strong>Meio Transporte</strong><br><span class="zh">交通工具</span>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; width: 12%;">
+        <strong>Custo Transporte</strong><br><span class="zh">交通费及币种</span>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; width: 8%;">
+        <strong>Câmbio</strong><br><span class="zh">汇率</span>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center; width: 10%;">
+        <strong>Valor R$</strong><br><span class="zh">雷亚尔金额</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="border: 1px solid black; padding: 0;">
+        <input type="date" id="transp_data_partida_2"
+          style="width: 100%; height: 70px; border: none; background: transparent; padding: 0; box-sizing: border-box;">
+      </td>
+      <td style="border: 1px solid black; padding: 0;">
+        <input type="date" id="transp_data_chegada_2"
+          style="width: 100%; height: 70px; border: none; background: transparent; padding: 0; box-sizing: border-box;">
+      </td>
+      <td style="border: 1px solid black; padding: 0;">
+        <input type="text" id="transp_cidade_partida_2" placeholder="Origem"
+          style="width: 100%; height: 70px; border: none; background: transparent; padding: 0 4px; box-sizing: border-box;">
+      </td>
+      <td style="border: 1px solid black; padding: 0;">
+        <input type="text" id="transp_cidade_destino_2" placeholder="Destino"
+          style="width: 100%; height: 70px; border: none; background: transparent; padding: 0 4px; box-sizing: border-box;">
+      </td>
+      <td style="border: 1px solid black; padding: 0;">
+        <input type="date" id="transp_inicio_2"
+          style="width: 100%; height: 70px; border: none; background: transparent; padding: 0; box-sizing: border-box;">
+      </td>
+      <td style="border: 1px solid black; padding: 0;">
+        <input type="date" id="transp_fim_2"
+          style="width: 100%; height: 70px; border: none; background: transparent; padding: 0; box-sizing: border-box;">
+      </td>
+      <td style="border: 1px solid black; padding: 0;">
+        <select id="transp_meio_2"
+          style="width: 100%; height: 70px; border: none; background: transparent; padding: 0 4px; box-sizing: border-box;">
+          <option value="">Selecione</option>
+          <option value="aviao">Avião</option>
+          <option value="trem">Trem</option>
+          <option value="onibus">Ônibus</option>
+        </select>
+      </td>
+      <td style="border: 1px solid black; padding: 0;">
+        <div style="display: flex; height: 70px; width: 100%;">
+          <input type="number" id="transp_valor_2" placeholder="0,00" step="0.01"
+            style="width: 60%; height: 100%; border: none; background: transparent; padding: 0 4px; box-sizing: border-box;">
+          <select id="transp_moeda_2"
+            style="width: 40%; height: 100%; border: none; background: transparent; padding: 0 4px; box-sizing: border-box;">
+            <option value="BRL">R$</option>
+            <option value="USD">US$</option>
+            <option value="EUR">€</option>
+          </select>
+        </div>
+      </td>
+      <td style="border: 1px solid black; padding: 0;">
+        <input type="number" id="transp_cambio_2" value="1.00" step="0.01"
+          style="width: 100%; height: 70px; border: none; background: transparent; padding: 0 4px; box-sizing: border-box;">
+      </td>
+      <td style="border: 1px solid black; padding: 0;">
+        <input type="text" id="transp_reais_2" readonly placeholder="R$ 0,00"
+          style="width: 100%; height: 70px; border: none; background: #f9f9f9; padding: 0 4px; box-sizing: border-box;">
+      </td>
+    </tr>
+
+    <tr>
+      <td style="border: 1px solid black; padding: 0;"></td>
+      <td style="border: 1px solid black; padding: 0;"></td>
+      <td style="border: 1px solid black; padding: 0;"></td>
+      <td style="border: 1px solid black; padding: 0;"></td>
+      <td style="border: 1px solid black; padding: 0;"></td>
+      <td style="border: 1px solid black; padding: 0;"></td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center;">
+        <strong>Cidade Estadia</strong><br><span class="zh">住宿城市</span>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center;">
+        <strong>Custo Moradia</strong><br><span class="zh">住宿费及币种</span>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center;">
+        <strong>Câmbio</strong><br><span class="zh">汇率</span>
+      </td>
+      <td style="border: 1px solid black; padding: 8px; text-align: center;">
+        <strong>Valor R$</strong><br><span class="zh">雷亚尔金额</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="border: 1px solid black; padding: 0;"></td>
+      <td style="border: 1px solid black; padding: 0;"></td>
+      <td style="border: 1px solid black; padding: 0;"></td>
+      <td style="border: 1px solid black; padding: 0;"></td>
+      <td style="border: 1px solid black; padding: 0;"></td>
+      <td style="border: 1px solid black; padding: 0;"></td>
+      <td style="border: 1px solid black; padding: 0;">
+        <input type="text" id="hosp_cidade_2" placeholder="Cidade"
+          style="width: 100%; height: 70px; border: none; background: transparent; padding: 0 4px; box-sizing: border-box;">
+      </td>
+      <td style="border: 1px solid black; padding: 0;">
+        <div style="display: flex; height: 70px; width: 100%;">
+          <input type="number" id="hosp_valor_2" placeholder="0,00" step="0.01"
+            style="width: 60%; height: 100%; border: none; background: transparent; padding: 0 4px; box-sizing: border-box;">
+          <select id="hosp_moeda_2"
+            style="width: 40%; height: 100%; border: none; background: transparent; padding: 0 4px; box-sizing: border-box;">
+            <option value="BRL">R$</option>
+            <option value="USD">US$</option>
+            <option value="EUR">€</option>
+          </select>
+        </div>
+      </td>
+      <td style="border: 1px solid black; padding: 0;">
+        <input type="number" id="hosp_cambio_2" value="1.00" step="0.01"
+          style="width: 100%; height: 70px; border: none; background: transparent; padding: 0 4px; box-sizing: border-box;">
+      </td>
+      <td style="border: 1px solid black; padding: 0;">
+        <input type="text" id="hosp_reais_2" readonly placeholder="R$ 0,00"
+          style="width: 100%; height: 70px; border: none; background: #f9f9f9; padding: 0 4px; box-sizing: border-box;">
+      </td>
     </tr>
   </table>
 
-  <!-- TRANSPORTE -->
-
-  <div class="section-transporte">
-    <div class="transporte-valor-flex-1">
-      <div class="section-flex-table">
-        <div class="table-gold">
-          <p>Data Partida<br>出发日期</p>
-          <input type="date" id="transp_data_partida_1">
+  <table style="border-collapse: collapse; width: 100%; border: 1px solid black;">
+    <tr>
+      <td style="border: 1px solid black; padding: 10px; text-align: center; width: 530px;">
+        <strong>Projeto</strong><br><span class="zh">项目</span>
+      </td>
+      <td style="border: 1px solid black; padding: 10px; text-align: center; width: 162px;">
+        <strong>Duração da Viagem(Dias)</strong><br><span class="zh">出港天数</span>
+      </td>
+      <td style="border: 1px solid black; padding: 10px; text-align: center; width: 162px;">
+        <strong>Dia Padrão</strong><br><span class="zh">标准天</span>
+      </td>
+      <td style="border: 1px solid black; padding: 10px; text-align: center; width: 162px;">
+        <strong>Padrão/Dia</strong><br><span class="zh">标准/天</span>
+      </td>
+      <td style="border: 1px solid black; padding: 10px; text-align: center; width: 162px;">
+        <strong>Valor e Moeda</strong><br><span class="zh">金额及币种</span>
+      </td>
+      <td style="border: 1px solid black; padding: 10px; text-align: center; width: 162px;">
+        <strong>Taxa de Câmbio</strong><br><span class="zh">汇率</span>
+      </td>
+      <td style="border: 1px solid black; padding: 10px; text-align: center; width: 162px;">
+        <strong>Valor em Reais</strong><br><span class="zh">雷亚尔金额</span>
+      </td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 10px;">
+        <input type="text" id="diaria_projeto" placeholder=" "
+          style="width: 100%; border: none; background: transparent;">
+      </td>
+      <td style="border: 1px solid black; padding: 10px;">
+        <input type="number" id="diaria_dias" placeholder="0"
+          style="width: 100%; border: none; background: transparent;">
+      </td>
+      <td style="border: 1px solid black; padding: 10px;">
+        <input type="number" id="diaria_dia_padrao" placeholder="0"
+          style="width: 100%; border: none; background: transparent;">
+      </td>
+      <td style="border: 1px solid black; padding: 10px;">
+        <input type="number" id="diaria_padrao_dia" placeholder="0,00" step="0.01"
+          style="width: 100%; border: none; background: transparent;">
+      </td>
+      <td style="border: 1px solid black; padding: 10px;">
+        <div style="display: flex; gap: 4px;">
+          <input type="number" id="diaria_valor" placeholder="0,00" step="0.01"
+            style="width: 60%; border: none; background: transparent;">
+          <select id="diaria_moeda" style="width: 35%; border: none; background: transparent;">
+            <option value="BRL">R$</option>
+            <option value="USD">US$</option>
+            <option value="EUR">€</option>
+          </select>
         </div>
-      </div>
-      <div class="section-flex-table">
-        <div class="table-gold">
-          <p>Data de Chegada<br>抵达日期</p>
-          <input type="date" id="transp_data_partida_1">
-        </div>
-      </div>
-      <div class="section-flex-table">
-        <div class="table-gold">
-          <p>Cidade de Partida<br>出发城市</p>
-          <input type="date" id="transp_data_partida_1">
-        </div>
-      </div>
-      <div class="section-flex-table">
-        <div class="table-gold">
-          <p>Cidade Destino<br>到达城市</p>
-          <input type="date" id="transp_data_partida_1">
-        </div>
-      </div>
-      <div class="section-flex-table">
-        <div class="table-gold">
-          <p>Data de Início da Estadia<br>停留起始日期</p>
-          <input type="date" id="transp_data_partida_1">
-        </div>
-      </div>
-      <div class="section-flex-table">
-        <div class="table-gold">
-          <p>Data do Fim da Estadia<br>停留终止日期</p>
-          <input type="date" id="transp_data_partida_1">
-        </div>
-      </div>
-    </div>
-
-    <div class="transporte-valor-flex-2">
-      <div class="section-flex-table">
-        <div class="table-gold2">
-          <p>Meio de Transporte<br>交通工具</p>
-          <input type="text" id="transp_data_partida_1">
-
-          <p>Cidade da Estadia<br>住宿城市</p>
-          <input type="text" id="transp_data_partida_1">
-        </div>
-      </div>
-
-
-      <div class="section-flex-table">
-        <div class="table-gold2">
-          <p>Custo de Transporte e Moeda<br>交通费及币种</p>
-          <input type="text" id="transp_data_partida_1">
-
-          <p>Custo de Moradia e Moeda<br>住宿费及币种</p>
-          <input type="text" id="transp_data_partida_1">
-        </div>
-      </div>
-
-
-      <div class="section-flex-table">
-        <div class="table-gold2">
-          <p>Taxa de Câmbio<br>汇率</p>
-          <input type="text" id="transp_data_partida_1">
-
-          <p>Taxa de Câmbio<br>汇率</p>
-          <input type="text" id="transp_data_partida_1">
-        </div>
-      </div>
-
-
-      <div class="section-flex-table">
-        <div class="table-gold2">
-          <p>Valor em Reais<br>雷亚尔金额</p>
-          <input type="text" id="transp_data_partida_1">
-
-          <p>Valor em Reais<br>雷亚尔金额</p>
-          <input type="text" id="transp_data_partida_1">
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="section-transporte">
-    <div class="transporte-valor-flex-1">
-      <div class="section-flex-table">
-        <div class="table-gold">
-          <p>Data Partida<br>出发日期</p>
-          <input type="date" id="transp_data_partida_1">
-        </div>
-      </div>
-      <div class="section-flex-table">
-        <div class="table-gold">
-          <p>Data de Chegada<br>抵达日期</p>
-          <input type="date" id="transp_data_partida_1">
-        </div>
-      </div>
-      <div class="section-flex-table">
-        <div class="table-gold">
-          <p>Cidade de Partida<br>出发城市</p>
-          <input type="date" id="transp_data_partida_1">
-        </div>
-      </div>
-      <div class="section-flex-table">
-        <div class="table-gold">
-          <p>Cidade Destino<br>到达城市</p>
-          <input type="date" id="transp_data_partida_1">
-        </div>
-      </div>
-      <div class="section-flex-table">
-        <div class="table-gold">
-          <p>Data de Início da Estadia<br>停留起始日期</p>
-          <input type="date" id="transp_data_partida_1">
-        </div>
-      </div>
-      <div class="section-flex-table">
-        <div class="table-gold">
-          <p>Data do Fim da Estadia<br>停留终止日期</p>
-          <input type="date" id="transp_data_partida_1">
-        </div>
-      </div>
-    </div>
-
-    <div class="transporte-valor-flex-2">
-      <div class="section-flex-table">
-        <div class="table-gold2">
-          <p>Meio de Transporte<br>交通工具</p>
-          <input type="text" id="transp_data_partida_1">
-
-          <p>Cidade da Estadia<br>住宿城市</p>
-          <input type="text" id="transp_data_partida_1">
-        </div>
-      </div>
-
-
-      <div class="section-flex-table">
-        <div class="table-gold2">
-          <p>Custo de Transporte e Moeda<br>交通费及币种</p>
-          <input type="text" id="transp_data_partida_1">
-
-          <p>Custo de Moradia e Moeda<br>住宿费及币种</p>
-          <input type="text" id="transp_data_partida_1">
-        </div>
-      </div>
-
-
-      <div class="section-flex-table">
-        <div class="table-gold2">
-          <p>Taxa de Câmbio<br>汇率</p>
-          <input type="text" id="transp_data_partida_1">
-
-          <p>Taxa de Câmbio<br>汇率</p>
-          <input type="text" id="transp_data_partida_1">
-        </div>
-      </div>
-
-
-      <div class="section-flex-table">
-        <div class="table-gold2">
-          <p>Valor em Reais<br>雷亚尔金额</p>
-          <input type="text" id="transp_data_partida_1">
-
-          <p>Valor em Reais<br>雷亚尔金额</p>
-          <input type="text" id="transp_data_partida_1">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="dados-projeto">
-    <div class="flex-dados-projetos">
-      <div class="table-projeto-a3">
-        <p>Projeto<br>项目</p>
-      </div>
-      <div class="table-projeto-a1">
-        <p>Duração da Viagem(Dias)<br>出差天数</p>
-      </div>
-      <div class="table-projeto-a1">
-        <p>Dia Padrão<br>标准天</p>
-      </div>
-      <div class="table-projeto-a1">
-        <p>Padrão/Dia<br>标准/天</p>
-      </div>
-      <div class="table-projeto-a1">
-        <p>Valor e Moeda<br>金额及币种</p>
-      </div>
-      <div class="table-projeto-a1">
-        <p>Taxa de Câmbio<br>汇率</p>
-      </div>
-      <div class="table-projeto-a1">
-        <p>Valor em Reais<br>雷亚尔金额</p>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="dados-projeto">
-    <div class="flex-dados-projetos">
-      <div class="table-projeto-a3">
-        <p>Outras Despesas/其他</p>
-      </div>
-      <div class="table-projeto-a1">
-        <input type="text" id="transp_data_partida_1">
-      </div>
-      <div class="table-projeto-a1">
-        <input type="text" id="transp_data_partida_1">
-      </div>
-      <div class="table-projeto-a1">
-        <input type="text" id="transp_data_partida_1">
-      </div>
-      <div class="table-projeto-a1">
-        <input type="text" id="transp_data_partida_1">
-      </div>
-      <div class="table-projeto-a1">
-        <input type="text" id="transp_data_partida_1">
-      </div>
-      <div class="table-projeto-a1">
-        <input type="text" id="transp_data_partida_1">
-      </div>
-    </div>
-  </div>
-  <div class="dados-projeto">
-    <div class="flex-dados-projetos">
-      <div class="table-projeto-a3">
-        <p>Valor (Escrito por Extenso) Amount in words/金额（大写）</p>
-      </div>
-      <div class="table-projeto-a1">
-        <input type="text" id="transp_data_partida_1">
-      </div>
-      <div class="table-projeto-a1">
-        <input type="text" id="transp_data_partida_1">
-      </div>
-      <div class="table-projeto-a1">
-        <input type="text" id="transp_data_partida_1">
-      </div>
-      <div class="table-projeto-a1">
-        <input type="text" id="transp_data_partida_1">
-      </div>
-      <div class="table-projeto-a1">
-        <input type="text" id="transp_data_partida_1">
-      </div>
-      <div class="table-projeto-a1">
-        <input type="text" id="transp_data_partida_1">
-      </div>
-    </div>
-  </div>
-  <div class="dados-projeto">
-    <div class="flex-dados-projetos">
-      <div class="table-projeto-a3">
-        <p>Custos Vindos de Serviços Públicos (Impressões, cartas, fax) /公杂费</p>
-      </div>
-      <div class="table-projeto-a1">
-        <input type="text" id="transp_data_partida_1">
-      </div>
-      <div class="table-projeto-a1">
-        <input type="text" id="transp_data_partida_1">
-      </div>
-      <div class="table-projeto-a1">
-        <input type="text" id="transp_data_partida_1">
-      </div>
-      <div class="table-projeto-a1">
-        <input type="text" id="transp_data_partida_1">
-      </div>
-      <div class="table-projeto-a1">
-        <input type="text" id="transp_data_partida_1">
-      </div>
-      <div class="table-projeto-a1">
-        <input type="text" id="transp_data_partida_1">
-      </div>
-    </div>
-  </div>
-
+      </td>
+      <td style="border: 1px solid black; padding: 10px;">
+        <input type="number" id="diaria_cambio" value="1.00" step="0.01"
+          style="width: 100%; border: none; background: transparent;">
+      </td>
+      <td style="border: 1px solid black; padding: 10px;">
+        <input type="text" id="diaria_reais" readonly placeholder="R$ 0,00"
+          style="width: 100%; border: none; background: #f9f9f9;">
+      </td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 10px; text-align: center;">
+        <strong>Custos Vindos de Serviços Públicos / 公杂费</strong>
+      </td>
+      <td style="border: 1px solid black; padding: 10px; text-align: center;">
+        <input type="text" id="servicos_desc" placeholder="Descrição"
+          style="width: 100%; border: none; background: transparent;">
+      </td>
+      <td style="border: 1px solid black; padding: 10px; text-align: center;">
+        <input type="number" id="servicos_valor" placeholder="R$ 0,00" step="0.01"
+          style="width: 100%; border: none; background: transparent;">
+      </td>
+      <td style="border: 1px solid black; padding: 10px; text-align: center;">
+        <input type="text" id="servicos_obs" placeholder="Observações"
+          style="width: 100%; border: none; background: transparent;">
+      </td>
+      <td style="border: 1px solid black; padding: 10px;"></td>
+      <td style="border: 1px solid black; padding: 10px;"></td>
+      <td style="border: 1px solid black; padding: 10px;"></td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 10px; text-align: center;">
+        <strong>Outras Despesas / 其他</strong>
+      </td>
+      <td style="border: 1px solid black; padding: 10px; text-align: center;">
+        <input type="text" id="outras_desc" placeholder="Descrição"
+          style="width: 100%; border: none; background: transparent;">
+      </td>
+      <td style="border: 1px solid black; padding: 10px; text-align: center;">
+        <input type="number" id="outras_valor" placeholder="R$ 0,00" step="0.01"
+          style="width: 100%; border: none; background: transparent;">
+      </td>
+      <td style="border: 1px solid black; padding: 10px; text-align: center;">
+        <input type="text" id="outras_obs" placeholder="Observações"
+          style="width: 100%; border: none; background: transparent;">
+      </td>
+      <td style="border: 1px solid black; padding: 10px;"></td>
+      <td style="border: 1px solid black; padding: 10px;"></td>
+      <td style="border: 1px solid black; padding: 10px;"></td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 10px; text-align: center;">
+        <strong>Valor (Escrito por Extenso) / 金额（大写）</strong>
+      </td>
+      <td colspan="5" style="border: 1px solid black; padding: 10px; text-align: center;">
+        <input type="text" id="valor_extenso" placeholder="Digite o valor por extenso"
+          style="width: 100%; border: none; background: transparent;">
+      </td>
+      <td style="border: 1px solid black; padding: 10px; text-align: center;">
+        <span id="total_geral" style="font-weight: bold; font-size: 12pt;">R$ 0,00</span>
+      </td>
+    </tr>
+  </table>
 
   <div class="assinaturas2">
     <div class="bloco-assinatura">
       <p>Gerente Geral<br>总经理:</p>
+      <input type="text" id="assinatura_gerente" placeholder="Nome / Data"
+        style="width: 100%; border: none; border-bottom: 1px solid black; margin-top: 5px;">
     </div>
     <div class="bloco-assinatura">
       <p>Vice-Presidente Direto:<br>员工所在部门/费用归口分管副总:</p>
+      <input type="text" id="assinatura_vp" placeholder="Nome / Data"
+        style="width: 100%; border: none; border-bottom: 1px solid black; margin-top: 5px;">
     </div>
     <div class="bloco-assinatura">
       <p>Responsável Direto:<br>员工所在部门/费用 <br>归口部门负责人:</p>
+      <input type="text" id="assinatura_responsavel" placeholder="Nome / Data"
+        style="width: 100%; border: none; border-bottom: 1px solid black; margin-top: 5px;">
     </div>
     <div class="bloco-assinatura position-more">
       <p>Financeiro:<br>财务审核:</p>
+      <input type="text" id="assinatura_financeiro" placeholder="Nome / Data"
+        style="width: 100%; border: none; border-bottom: 1px solid black; margin-top: 5px;">
     </div>
     <div class="bloco-assinatura position-more">
       <p>Executado por:<br>经办人:</p>
+      <input type="text" id="assinatura_executado" placeholder="Nome / Data"
+        style="width: 100%; border: none; border-bottom: 1px solid black; margin-top: 5px;">
     </div>
   </div>
-
 
   <div class="obs-final">
     <p>Observação: 1.Caso o aplicante não pertença ao departamento custeador, as assinaturas dos responsáveis dos dois
@@ -422,7 +581,6 @@
     </p>
   </div>
 
-  <!-- BOTÕES -->
   <div class="no-print container-botoes">
     <button class="btn btn-primary" onclick="ReembolsoViagem.calcularTodosValores()">🧮 Calcular Totais</button>
     <button class="btn btn-primary" onclick="ReembolsoViagem.gerarPDF()">🖨️ Gerar PDF</button>

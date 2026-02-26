@@ -12,7 +12,6 @@ body {
   background: white;
   padding: 0.5in;
   /* Margem igual ao Word */
-  max-width: 1600px;
   margin: 0 auto;
   line-height: 1.2;
   color: black;
@@ -324,16 +323,16 @@ input[type="checkbox"] {
 
 .table-gold {
   text-align: center;
-  width: 148.9px;
-  height: 260px;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-left: 1px;
 }
 
 .table-gold p {
   border: 1px solid;
+  border-bottom: none;
   width: 100%;
   height: 30%;
   display: flex;
